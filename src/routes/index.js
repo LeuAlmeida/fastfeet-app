@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import SignIn from '~/pages/SignIn';
 
-// import DashboardRoutes from './Dashboard.routes';
+import DashboardRoutes from './DashboardRoutes';
 
 const Stack = createStackNavigator();
 
@@ -19,11 +19,11 @@ export default function createRouter(isSigned = false) {
     </Stack.Navigator>
   ) : (
     <Stack.Navigator>
-      {/* <Stack.Screen
+      <Stack.Screen
         name="Dashboard"
         options={{ headerShown: false }}
         component={DashboardRoutes}
-      /> */}
+      />
     </Stack.Navigator>
   );
 }
