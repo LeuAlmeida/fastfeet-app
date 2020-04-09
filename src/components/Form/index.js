@@ -1,8 +1,2 @@
-import React from 'react';
-import { View } from 'react-native';
-
-// import { Container } from './styles';
-
-export default function Form() {
-  return <View />;
-}
+export { default as Input } from './Input';
+export { default as TextAreaInput } from './TextAreaInput';
