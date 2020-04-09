@@ -28,6 +28,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
+    'camelcase': 'off',
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.jsx', '.js'] }
