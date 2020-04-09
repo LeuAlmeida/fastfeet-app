@@ -11,13 +11,13 @@ export function* singIn({ payload }) {
   try {
     const { id } = payload;
 
-    const response = yield call(api.get, `deliverymen/${id}`);
+    const response = yield call(api.get, `deliveryman?deliverymanId=${id}`);
 
     yield put(
       signInSuccess(id, {
         name: response.data.name,
         email: response.data.email,
-        created_at: format(parseISO(response.data.created_at), 'dd/MM/yyyy'),
+        // created_at: format(parseISO(response.data.created_at), 'dd/MM/yyyy'),
         avatar: response.data.avatar,
       })
     );
