@@ -1,6 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-underscore-dangle */
-
 import React, { useRef, useEffect } from 'react';
 import { ViewPropTypes } from 'react-native';
 
