@@ -89,7 +89,12 @@ export default function DeliveryDetails() {
             <Title>Situação da entrega</Title>
           </TitleContainer>
           <Label>STATUS</Label>
-          <Status>{delivery.status}</Status>
+          <Status>
+            {delivery.status === 'DELIVERED' ? 'Entregue' : ''}
+            {delivery.status === 'WITHDRAWN' ? 'Retirado' : ''}
+            {delivery.status === 'PENDING' ? 'Pendente' : ''}
+            {delivery.status === 'CANCELED' ? 'Cancelado' : ''}
+          </Status>
           <View
             style={{ flexDirection: 'row', justifyContent: 'space-between' }}
           >
@@ -125,7 +130,7 @@ export default function DeliveryDetails() {
           ) : (
             <Option
               onPress={() =>
-                navigation.navigate('ConfirmPhoto', {
+                navigation.navigate('ConfirmPicture', {
                   delivery_id: delivery.id,
                 })
               }
