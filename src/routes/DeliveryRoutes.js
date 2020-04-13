@@ -3,6 +3,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import CreateProblem from '~/pages/CreateProblem';
+import ViewProblem from '~/pages/ViewProblem';
 import Deliveries from '~/pages/Deliveries';
 import DeliveryConfirmPicture from '~/pages/DeliveryConfirmPicture';
 import DeliveryDetails from '~/pages/DeliveryDetails';
@@ -48,6 +49,13 @@ export default function DeliveryRoutes() {
           title: 'Informar Problema',
         }}
         component={CreateProblem}
+      />
+      <Stack.Screen
+        name="ViewProblem"
+        options={{
+          title: 'Visualizar Problemas',
+        }}
+        component={ViewProblem}
       />
     </Stack.Navigator>
   );
