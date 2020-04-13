@@ -43,7 +43,7 @@ export default function DeliveryRoutes() {
         component={DeliveryConfirmPicture}
       />
       <Stack.Screen
-        name="CraeteProblem"
+        name="CreateProblem"
         options={{
           title: 'Informar Problema',
         }}
