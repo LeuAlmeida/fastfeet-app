@@ -32,13 +32,16 @@ export default function DeliveryDetails() {
   async function handleDeliveryWithdraw() {
     async function delievryWithdraw() {
       try {
-        await api.put(`/deliveryman/${auth.id}/delivery/${delivery.id}`, {
-          start_date: new Date(),
-        });
+        await api.put(
+          `/deliveryman/${auth.id}/deliveries/${delivery.id}/start`,
+          {
+            start_date: new Date(),
+          }
+        );
 
         navigation.navigate('Entregas');
       } catch (err) {
-        Alert.alert('Horário de retirda inválida.');
+        Alert.alert('Erro', err.response.data.error);
       }
     }
 
@@ -112,7 +115,7 @@ export default function DeliveryDetails() {
         <Menu>
           <Option
             onPress={() =>
-              navigation.navigate('CraeteProblem', { delivery_id: delivery.id })
+              navigation.navigate('CreateProblem', { delivery_id: delivery.id })
             }
           >
             <Icon name="highlight-off" color={colors.danger} size={20} />
@@ -122,7 +125,7 @@ export default function DeliveryDetails() {
             <Icon name="info-outline" color="#E7BA40" size={20} />
             <OptionTitle>Visualizar{`\n`}Problemas</OptionTitle>
           </Option>
-          {delivery.status === 'PENDENTE' ? (
+          {delivery.status === 'PENDING' ? (
             <Option onPress={handleDeliveryWithdraw}>
               <Icon name="local-shipping" color={colors.primary} size={20} />
               <OptionTitle>Realizar{`\n`}Retirada</OptionTitle>
