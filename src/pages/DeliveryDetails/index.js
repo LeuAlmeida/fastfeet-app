@@ -115,13 +115,22 @@ export default function DeliveryDetails() {
         <Menu>
           <Option
             onPress={() =>
-              navigation.navigate('CreateProblem', { delivery_id: delivery.id })
+              navigation.navigate('CreateProblem', {
+                delivery_id: delivery.id,
+              })
             }
           >
             <Icon name="highlight-off" color={colors.danger} size={20} />
             <OptionTitle>Informar{`\n`}Problema</OptionTitle>
           </Option>
-          <Option>
+          <Option
+            onPress={() =>
+              navigation.navigate('ViewProblem', {
+                delivery_id: delivery.id,
+                product_name: delivery.product,
+              })
+            }
+          >
             <Icon name="info-outline" color="#E7BA40" size={20} />
             <OptionTitle>Visualizar{`\n`}Problemas</OptionTitle>
           </Option>
