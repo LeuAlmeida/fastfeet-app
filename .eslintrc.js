@@ -29,6 +29,8 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
     'camelcase': 'off',
+    'no-undef': 'off',
+    'prefer-const': 'off',
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.jsx', '.js'] }
