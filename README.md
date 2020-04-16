@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-<img alt="FastFeet presentation" src="./github/animation.gif" />
+<img alt="FastFeet presentation" src="./github/presentation-app.png" />
 </p>
 
 ## Introduction
@@ -38,7 +38,7 @@ Make a clone from the repo and install the dependencies
 # First of all, clone the project
 $ git clone https://github.com/LeuAlmeida/fastfeet-app.git
 
-# Enter in the DevRadar folder
+# Enter in the Fastfeet App folder
 $ cd fastfeet-app
 
 # Install all dependencies using Yarn
@@ -50,10 +50,6 @@ $ react-native start
 # Run the project
 $ react-native run-android # or run-ios
 ```
-
-## Demo
-
-Live demo incoming.
 
 <!-- You can try a DevRadar online demo in [https://1dois.com.br/devradar](https://1dois.com.br/devradar) (without navigator current location) -->
 
